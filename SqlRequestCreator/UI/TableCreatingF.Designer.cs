@@ -108,7 +108,6 @@ namespace SqlRequestCreator.UI
             this.Controls.Add(this.TBScheme);
             this.Controls.Add(this.butBack);
             this.Name = "TableCreatingF";
-            this.Text = "TableCreatingF";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TableCreatingF_FormClosing);
             this.Controls.SetChildIndex(this.butBack, 0);
             this.Controls.SetChildIndex(this.TBScheme, 0);

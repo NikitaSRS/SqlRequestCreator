@@ -36,8 +36,9 @@ namespace SqlRequestCreator.Util
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "TableCreating";
-            this.Size = new System.Drawing.Size(1340, 100);
+            this.Size = new System.Drawing.Size(1333, 100);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

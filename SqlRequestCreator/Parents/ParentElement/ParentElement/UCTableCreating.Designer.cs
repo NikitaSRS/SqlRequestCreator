@@ -40,6 +40,8 @@
             this.CBidentity = new System.Windows.Forms.CheckBox();
             this.TB1 = new System.Windows.Forms.TextBox();
             this.TB2 = new System.Windows.Forms.TextBox();
+            this.TB3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TBAttributes
@@ -180,11 +182,30 @@
             this.TB2.Size = new System.Drawing.Size(20, 20);
             this.TB2.TabIndex = 11;
             // 
+            // TB3
+            // 
+            this.TB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.TB3.Location = new System.Drawing.Point(707, 32);
+            this.TB3.Name = "TB3";
+            this.TB3.Size = new System.Drawing.Size(200, 35);
+            this.TB3.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(704, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Parameters:";
+            // 
             // UCTableCreating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.TB3);
             this.Controls.Add(this.TB2);
             this.Controls.Add(this.TB1);
             this.Controls.Add(this.CBidentity);
@@ -217,5 +238,7 @@
         private System.Windows.Forms.CheckBox CBidentity;
         private System.Windows.Forms.TextBox TB1;
         private System.Windows.Forms.TextBox TB2;
+        public System.Windows.Forms.TextBox TB3;
+        private System.Windows.Forms.Label label4;
     }
 }

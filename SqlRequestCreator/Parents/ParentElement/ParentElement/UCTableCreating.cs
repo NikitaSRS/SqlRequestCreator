@@ -29,7 +29,7 @@ namespace ParentElement
 
         public string values()
         {
-            return TBAttributes.Text + " " + CBTypes.Text + (TBSize.Text != "" ? $"({TBSize.Text} )" : "") + (CBPK.Checked == true ? " Primary key" : "") + (CBNULL.Checked == true ? " null" : " not null") + (CBidentity.Checked == true ? $" identity({TB1.Text},{TB2.Text})": "");
+            return TBAttributes.Text + " " + CBTypes.Text + (TBSize.Text != "" ? $"({TBSize.Text} )" : "") + (TB3.Text != "" ? TB3.Text : "") + (CBPK.Checked == true ? " Primary key" : "") + (CBNULL.Checked == true ? " null" : " not null") + (CBidentity.Checked == true ? $" identity({TB1.Text},{TB2.Text})": "");
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
