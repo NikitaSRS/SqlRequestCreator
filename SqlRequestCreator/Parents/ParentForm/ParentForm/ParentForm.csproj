@@ -69,5 +69,8 @@
   <ItemGroup>
     <None Include="bin\Resources\Rseter s.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Resources\SRC2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

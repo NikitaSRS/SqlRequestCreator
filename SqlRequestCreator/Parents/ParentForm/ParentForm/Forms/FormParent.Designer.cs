@@ -31,23 +31,11 @@ namespace ParentForm.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormParent));
-            this.PBLogo = new System.Windows.Forms.PictureBox();
             this.lDateTime = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.PBLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PBLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PBLogo
-            // 
-            this.PBLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.PBLogo.Image = global::ParentForm.Properties.Resources.Rseter_s;
-            this.PBLogo.Location = new System.Drawing.Point(1472, 799);
-            this.PBLogo.Name = "PBLogo";
-            this.PBLogo.Size = new System.Drawing.Size(100, 50);
-            this.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBLogo.TabIndex = 0;
-            this.PBLogo.TabStop = false;
-            this.PBLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lDateTime
             // 
@@ -62,6 +50,18 @@ namespace ParentForm.Forms
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // PBLogo
+            // 
+            this.PBLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PBLogo.Image = global::ParentForm.Properties.Resources.SRC2;
+            this.PBLogo.Location = new System.Drawing.Point(1521, 799);
+            this.PBLogo.Name = "PBLogo";
+            this.PBLogo.Size = new System.Drawing.Size(64, 64);
+            this.PBLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBLogo.TabIndex = 0;
+            this.PBLogo.TabStop = false;
+            this.PBLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormParent
             // 
