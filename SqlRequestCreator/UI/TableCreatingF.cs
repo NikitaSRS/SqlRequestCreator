@@ -16,6 +16,7 @@ namespace SqlRequestCreator.UI
 {
     public partial class TableCreatingF : ParentForm.Forms.FormParent
     {
+        public string foreign_key = "";
         public TableCreatingF()
         {
             InitializeComponent();
@@ -73,7 +74,39 @@ namespace SqlRequestCreator.UI
                 request += (i == 0 ? TC.values() : $",\n{TC.values()}");
                 i++;
             }
+            if(TBAttrib != null && TBTable != null)
+            {
+                request += foreign_key;
+            }
             MessageBox.Show(request + "\n);");
+        }
+
+        private void FLP_ControlAdded(object sender, ControlEventArgs e)
+        {
+
+        }
+
+        private void FLP_CursorChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FLP_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void CBAttr_Enter(object sender, EventArgs e)
+        {
+            CBAttr.Items.Clear();
+            foreach (TableCreating TC in FLP.Controls)
+            {
+                CBAttr.Items.Add(TC.NameAttr());
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreign_key += $",\nForeign key ({CBAttr.Text}) references {TBTable.Text} ({TBAttrib.Text})";
         }
     }
 }

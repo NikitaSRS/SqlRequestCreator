@@ -32,6 +32,11 @@ namespace ParentElement
             return TBAttributes.Text + " " + CBTypes.Text + (TBSize.Text != "" ? $"({TBSize.Text} )" : "") + (TB3.Text != "" ? TB3.Text : "") + (CBPK.Checked == true ? " Primary key" : "") + (CBNULL.Checked == true ? " null" : " not null") + (CBidentity.Checked == true ? $" identity({TB1.Text},{TB2.Text})": "");
         }
 
+        public string NameAttr()
+        {
+            return TBAttributes.Text;
+        }
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 

@@ -35,6 +35,15 @@ namespace SqlRequestCreator.UI
             this.butAdd = new System.Windows.Forms.Button();
             this.FLP = new System.Windows.Forms.FlowLayoutPanel();
             this.butCompile = new System.Windows.Forms.Button();
+            this.CBAttr = new System.Windows.Forms.ComboBox();
+            this.GBFK = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TBTable = new System.Windows.Forms.TextBox();
+            this.TBAttrib = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.butAddFK = new System.Windows.Forms.Button();
+            this.GBFK.SuspendLayout();
             this.SuspendLayout();
             // 
             // butBack
@@ -84,6 +93,9 @@ namespace SqlRequestCreator.UI
             this.FLP.Name = "FLP";
             this.FLP.Size = new System.Drawing.Size(1340, 771);
             this.FLP.TabIndex = 8;
+            this.FLP.CursorChanged += new System.EventHandler(this.FLP_CursorChanged);
+            this.FLP.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.FLP_ControlAdded);
+            this.FLP.Enter += new System.EventHandler(this.FLP_Enter);
             // 
             // butCompile
             // 
@@ -96,11 +108,92 @@ namespace SqlRequestCreator.UI
             this.butCompile.UseVisualStyleBackColor = true;
             this.butCompile.Click += new System.EventHandler(this.butCompile_Click);
             // 
+            // CBAttr
+            // 
+            this.CBAttr.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.CBAttr.FormattingEnabled = true;
+            this.CBAttr.Location = new System.Drawing.Point(6, 40);
+            this.CBAttr.Name = "CBAttr";
+            this.CBAttr.Size = new System.Drawing.Size(100, 37);
+            this.CBAttr.TabIndex = 10;
+            this.CBAttr.Enter += new System.EventHandler(this.CBAttr_Enter);
+            // 
+            // GBFK
+            // 
+            this.GBFK.Controls.Add(this.butAddFK);
+            this.GBFK.Controls.Add(this.label3);
+            this.GBFK.Controls.Add(this.label2);
+            this.GBFK.Controls.Add(this.TBAttrib);
+            this.GBFK.Controls.Add(this.TBTable);
+            this.GBFK.Controls.Add(this.label1);
+            this.GBFK.Controls.Add(this.CBAttr);
+            this.GBFK.Location = new System.Drawing.Point(1368, 181);
+            this.GBFK.Name = "GBFK";
+            this.GBFK.Size = new System.Drawing.Size(200, 268);
+            this.GBFK.TabIndex = 10;
+            this.GBFK.TabStop = false;
+            this.GBFK.Text = "Foreign Keys";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Choose attribute";
+            // 
+            // TBTable
+            // 
+            this.TBTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.TBTable.Location = new System.Drawing.Point(9, 108);
+            this.TBTable.Name = "TBTable";
+            this.TBTable.Size = new System.Drawing.Size(185, 35);
+            this.TBTable.TabIndex = 12;
+            // 
+            // TBAttrib
+            // 
+            this.TBAttrib.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.TBAttrib.Location = new System.Drawing.Point(9, 171);
+            this.TBAttrib.Name = "TBAttrib";
+            this.TBAttrib.Size = new System.Drawing.Size(185, 35);
+            this.TBAttrib.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Foreign table";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 155);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Foreign attribute";
+            // 
+            // butAddFK
+            // 
+            this.butAddFK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.butAddFK.Location = new System.Drawing.Point(9, 212);
+            this.butAddFK.Name = "butAddFK";
+            this.butAddFK.Size = new System.Drawing.Size(185, 50);
+            this.butAddFK.TabIndex = 11;
+            this.butAddFK.Text = "Add FK";
+            this.butAddFK.UseVisualStyleBackColor = true;
+            this.butAddFK.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TableCreatingF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.GBFK);
             this.Controls.Add(this.butCompile);
             this.Controls.Add(this.FLP);
             this.Controls.Add(this.butAdd);
@@ -115,6 +208,9 @@ namespace SqlRequestCreator.UI
             this.Controls.SetChildIndex(this.butAdd, 0);
             this.Controls.SetChildIndex(this.FLP, 0);
             this.Controls.SetChildIndex(this.butCompile, 0);
+            this.Controls.SetChildIndex(this.GBFK, 0);
+            this.GBFK.ResumeLayout(false);
+            this.GBFK.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,5 +224,13 @@ namespace SqlRequestCreator.UI
         private System.Windows.Forms.Button butAdd;
         private System.Windows.Forms.FlowLayoutPanel FLP;
         private System.Windows.Forms.Button butCompile;
+        private System.Windows.Forms.ComboBox CBAttr;
+        private System.Windows.Forms.GroupBox GBFK;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TBAttrib;
+        private System.Windows.Forms.TextBox TBTable;
+        private System.Windows.Forms.Button butAddFK;
     }
 }
