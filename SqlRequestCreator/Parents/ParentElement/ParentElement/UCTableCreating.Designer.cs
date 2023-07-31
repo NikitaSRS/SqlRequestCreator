@@ -28,18 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TBAttributes = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.CBTypes = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TBSize = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CBPK = new System.Windows.Forms.CheckBox();
+            this.CBNULL = new System.Windows.Forms.CheckBox();
+            this.CBidentity = new System.Windows.Forms.CheckBox();
+            this.TB1 = new System.Windows.Forms.TextBox();
+            this.TB2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // TBAttributes
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.textBox1.Location = new System.Drawing.Point(28, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 35);
-            this.textBox1.TabIndex = 0;
+            this.TBAttributes.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.TBAttributes.Location = new System.Drawing.Point(28, 32);
+            this.TBAttributes.Name = "TBAttributes";
+            this.TBAttributes.Size = new System.Drawing.Size(200, 35);
+            this.TBAttributes.TabIndex = 0;
             // 
             // label1
             // 
@@ -61,14 +70,133 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // CBTypes
+            // 
+            this.CBTypes.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.CBTypes.FormattingEnabled = true;
+            this.CBTypes.Items.AddRange(new object[] {
+            "bigint",
+            "numeric",
+            "bit",
+            "smallint",
+            "decimal",
+            "smallmoney",
+            "int",
+            "tinyint",
+            "money",
+            "float",
+            "real",
+            "date",
+            "datetimeoffset",
+            "datetime2",
+            "smalldatetime",
+            "datetime",
+            "time",
+            "char",
+            "varchar",
+            "text",
+            "nchar",
+            "nvarchar",
+            "ntext",
+            "binary",
+            "varbinary",
+            "image"});
+            this.CBTypes.Location = new System.Drawing.Point(234, 32);
+            this.CBTypes.Name = "CBTypes";
+            this.CBTypes.Size = new System.Drawing.Size(200, 37);
+            this.CBTypes.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(231, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Type:";
+            // 
+            // TBSize
+            // 
+            this.TBSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.TBSize.Location = new System.Drawing.Point(440, 32);
+            this.TBSize.Name = "TBSize";
+            this.TBSize.Size = new System.Drawing.Size(100, 35);
+            this.TBSize.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(437, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Size:";
+            // 
+            // CBPK
+            // 
+            this.CBPK.AutoSize = true;
+            this.CBPK.Location = new System.Drawing.Point(563, 16);
+            this.CBPK.Name = "CBPK";
+            this.CBPK.Size = new System.Drawing.Size(87, 17);
+            this.CBPK.TabIndex = 7;
+            this.CBPK.Text = "Primary Key?";
+            this.CBPK.UseVisualStyleBackColor = true;
+            this.CBPK.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // CBNULL
+            // 
+            this.CBNULL.AutoSize = true;
+            this.CBNULL.Location = new System.Drawing.Point(563, 74);
+            this.CBNULL.Name = "CBNULL";
+            this.CBNULL.Size = new System.Drawing.Size(60, 17);
+            this.CBNULL.TabIndex = 8;
+            this.CBNULL.Text = "NULL?";
+            this.CBNULL.UseVisualStyleBackColor = true;
+            // 
+            // CBidentity
+            // 
+            this.CBidentity.AutoSize = true;
+            this.CBidentity.Location = new System.Drawing.Point(563, 46);
+            this.CBidentity.Name = "CBidentity";
+            this.CBidentity.Size = new System.Drawing.Size(66, 17);
+            this.CBidentity.TabIndex = 9;
+            this.CBidentity.Text = "Identity?";
+            this.CBidentity.UseVisualStyleBackColor = true;
+            this.CBidentity.CheckedChanged += new System.EventHandler(this.CBidentity_CheckedChanged);
+            // 
+            // TB1
+            // 
+            this.TB1.Location = new System.Drawing.Point(636, 46);
+            this.TB1.Name = "TB1";
+            this.TB1.ReadOnly = true;
+            this.TB1.Size = new System.Drawing.Size(20, 20);
+            this.TB1.TabIndex = 10;
+            // 
+            // TB2
+            // 
+            this.TB2.Location = new System.Drawing.Point(662, 46);
+            this.TB2.Name = "TB2";
+            this.TB2.ReadOnly = true;
+            this.TB2.Size = new System.Drawing.Size(20, 20);
+            this.TB2.TabIndex = 11;
+            // 
             // UCTableCreating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Controls.Add(this.TB2);
+            this.Controls.Add(this.TB1);
+            this.Controls.Add(this.CBidentity);
+            this.Controls.Add(this.CBNULL);
+            this.Controls.Add(this.CBPK);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TBSize);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.CBTypes);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TBAttributes);
             this.Name = "UCTableCreating";
             this.Size = new System.Drawing.Size(1340, 100);
             this.ResumeLayout(false);
@@ -77,9 +205,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox TBAttributes;
+        private System.Windows.Forms.ComboBox CBTypes;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox TBSize;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox CBPK;
+        private System.Windows.Forms.CheckBox CBNULL;
+        private System.Windows.Forms.CheckBox CBidentity;
+        private System.Windows.Forms.TextBox TB1;
+        private System.Windows.Forms.TextBox TB2;
     }
 }

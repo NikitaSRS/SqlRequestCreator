@@ -62,5 +62,18 @@ namespace SqlRequestCreator.UI
             TableCreating TC = new TableCreating();
             FLP.Controls.Add(TC);
         }
+
+        private void butCompile_Click(object sender, EventArgs e)
+        {
+            int alpha = FLP.Controls.Count;
+            int i = 0;
+            string request = $"Create table {TBScheme.Text}.{TBTableName.Text} (\n";
+            foreach(TableCreating TC in FLP.Controls)
+            {
+                request += (i == 0 ? TC.values() : $",\n{TC.values()}");
+                i++;
+            }
+            MessageBox.Show(request + "\n);");
+        }
     }
 }

@@ -34,6 +34,7 @@ namespace SqlRequestCreator.UI
             this.TBTableName = new System.Windows.Forms.TextBox();
             this.butAdd = new System.Windows.Forms.Button();
             this.FLP = new System.Windows.Forms.FlowLayoutPanel();
+            this.butCompile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // butBack
@@ -84,11 +85,23 @@ namespace SqlRequestCreator.UI
             this.FLP.Size = new System.Drawing.Size(1340, 771);
             this.FLP.TabIndex = 8;
             // 
+            // butCompile
+            // 
+            this.butCompile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.butCompile.Location = new System.Drawing.Point(1368, 677);
+            this.butCompile.Name = "butCompile";
+            this.butCompile.Size = new System.Drawing.Size(200, 50);
+            this.butCompile.TabIndex = 9;
+            this.butCompile.Text = "Compiling request";
+            this.butCompile.UseVisualStyleBackColor = true;
+            this.butCompile.Click += new System.EventHandler(this.butCompile_Click);
+            // 
             // TableCreatingF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.Controls.Add(this.butCompile);
             this.Controls.Add(this.FLP);
             this.Controls.Add(this.butAdd);
             this.Controls.Add(this.TBTableName);
@@ -102,6 +115,7 @@ namespace SqlRequestCreator.UI
             this.Controls.SetChildIndex(this.TBTableName, 0);
             this.Controls.SetChildIndex(this.butAdd, 0);
             this.Controls.SetChildIndex(this.FLP, 0);
+            this.Controls.SetChildIndex(this.butCompile, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,5 +128,6 @@ namespace SqlRequestCreator.UI
         private System.Windows.Forms.TextBox TBTableName;
         private System.Windows.Forms.Button butAdd;
         private System.Windows.Forms.FlowLayoutPanel FLP;
+        private System.Windows.Forms.Button butCompile;
     }
 }
